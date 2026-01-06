@@ -1,2 +1,22 @@
-# GridAdmin
-Secure LAN Administration System written in C. Features include Multithreaded Server, GTK+3 Client, AES-256 Encryption, SSH Remote Execution, and Wake-on-LAN/Shutdown capabilities.
+GridAdmin - Local Network Administration System
+
+GridAdmin is an advanced Client-Server application, written in C, designed for the centralized administration of workstations within a local network. The system allows for remote shell command execution (SSH), workstation status monitoring (Online/Offline), power management (Wake-on-LAN / Shutdown), and utilizes a secure connection via AES-256 encryption.
+
+Quick Installation and Compilation
+The project includes an automated Makefile. Open a terminal in the project folder and follow these steps:
+Step 1: Install Dependencies
+        make setup
+Step 2: Compile Server and Client
+        make
+Step 3: Start Server
+        ./server <num_threads> <encryption_key>
+Step 4: Start Client
+        ./client <server_IP / local_IP> <server_PORT> <server_encryption_key>
+        
+PORT = 3670
+Local_IP = 127.0.0.1
+
+Application Usage
+To access the administration functions, you must log in as an administrator.
+    user: admin
+    password: adminpass
